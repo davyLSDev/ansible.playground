@@ -1,0 +1,4 @@
+---
+# file: roles/servers/tasks/main.yml
+- name: First test of roles
+  debug: msg="This is the first refactoring of the project to use roles"

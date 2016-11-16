@@ -1,6 +1,10 @@
 ---
 # file: site.yml
-- hosts: all
-  tasks:
-    - name: First test
-      debug: msg="This is the first run"
+# intended to be run like: ansible-playbook -i inventory site.yml
+- name: Set up servers
+  hosts: servers
+  remote_user: worker
+
+  roles:
+    - servers
+
