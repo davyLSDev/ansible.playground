@@ -1,0 +1,6 @@
+---
+# file: site.yml
+- hosts: all
+  tasks:
+    - name: First test
+      debug: msg="This is the first run"
