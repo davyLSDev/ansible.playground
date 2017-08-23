@@ -2,3 +2,14 @@
 # file: roles/servers/tasks/main.yml
 - name: First test of roles
   debug: msg="This is the first refactoring of the project to use roles"
+  
+- name: Write out variables stored in group_vars/all
+  debug: msg="{{ group_var_all }}"
+  
+- name: Write out variables stored in group_vars/servers
+  debug: msg="{{ group_var_servers }}"
+  
+- name: Write out the secret variables
+  debug: msg="{{ pword_server_1 }}"  
+  
+  
