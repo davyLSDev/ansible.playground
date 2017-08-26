@@ -1,0 +1,5 @@
+---
+# file: roles/testers/tasks/main.yml
+- name: First test of roles
+  debug: msg="This is the contents of the super secret variable {{ super_secret_var }}"
+  

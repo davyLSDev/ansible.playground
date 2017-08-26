@@ -2,9 +2,10 @@
 # file: site.yml
 # intended to be run like: ansible-playbook -i inventory site.yml
 - name: Set up servers
-  hosts: servers
-  remote_user: worker
+  hosts: all
+  remote_user: control
 
   roles:
     - servers
-
+    - buildagents
+    - testers

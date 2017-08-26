@@ -1,0 +1,16 @@
+---
+# file: roles/buildagents/tasks/main.yml
+
+- name: Ensure that the jenkins_ssh file variables are being read
+  debug: 
+    msg:"This is {{ jenkins_ssh_file }}"
+  
+- name: copy secret keys to /control/test/ssh
+  copy:
+    content: "{{ item.value.content }}"
+    dest: "/home/control/test/{{ item.value.file_name }}"
+    owner: control
+    group: control
+    mode: 600
+  no_log: true
+  with_dict: "{{ jenkins_ssh }}"

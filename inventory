@@ -1,2 +1,16 @@
+---
+# file: inventory
+# note the [category name] categories align with the group_vars/[category name]
+# and must be present for the variables to be picked up
+
+[buildagents]
+testing
+
+[packagers]
+testing
+
 [servers]
-tennant
+testing
+
+[testers]
+testing
